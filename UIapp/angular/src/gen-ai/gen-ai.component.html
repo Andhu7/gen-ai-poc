@@ -1,0 +1,21 @@
+
+ 
+ <div class="container">
+     <h2>🧠 Gen AI PoC</h2>
+   
+     <textarea
+       [(ngModel)]="prompt"
+       rows="4"
+       placeholder="Enter your prompt..."
+     ></textarea>
+   
+     <button (click)="generate()" [disabled]="loading">
+       {{ loading ? 'Generating...' : 'Generate' }}
+     </button>
+   
+     <div class="result" *ngIf="result">
+       <h3>Result:</h3>
+       <pre>{{ result }}</pre>
+     </div>
+   </div>
+ 
